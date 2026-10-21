@@ -1,0 +1,9 @@
+.venv/
+.kernels/
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
+figures/report_review-*.png
+.env
+.env.*
+

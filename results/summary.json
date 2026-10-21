@@ -1,0 +1,186 @@
+{
+  "winner": "Boosting",
+  "engineered": true,
+  "metrics": {
+    "accuracy": 0.8625,
+    "precision": 0.8625,
+    "recall": 1.0,
+    "f1": 0.9261744966442953,
+    "roc_auc": 0.8798126189430536,
+    "average_precision": 0.9790757762645282,
+    "brier": 0.08995637745452832,
+    "test_prevalence": 0.8625,
+    "threshold": 0.41
+  },
+  "targeting": {
+    "contacted": 48.0,
+    "true_churners_reached": 48.0,
+    "precision_at_20": 1.0,
+    "recall_at_20": 0.2318840579710145,
+    "lift": 1.1594202898550725,
+    "random_expected_churners": 41.400000000000006,
+    "expected_retained": 12.0,
+    "cost": 240.0,
+    "gross_value": 2400.0,
+    "net_benefit": 2160.0,
+    "incremental_net_vs_random": 329.9999999999997
+  },
+  "config": {
+    "contact_cost": 5,
+    "retained_value": 200,
+    "success_rate": 0.25,
+    "capacity": 0.2
+  },
+  "local": [
+    {
+      "profile": "low",
+      "customer_id": "CUST100626",
+      "probability": 0.45564661182962946,
+      "reference_replacement_deltas": [
+        [
+          "monthly_usage_gb",
+          -0.40618729471533926
+        ],
+        [
+          "contract_type",
+          -0.1287136095784271
+        ],
+        [
+          "satisfaction_score",
+          -0.057267688310295994
+        ],
+        [
+          "monthly_charges",
+          0.004500978420118873
+        ]
+      ],
+      "raw_record": {
+        "age": 31,
+        "tenure_months": 65,
+        "contract_type": "One year",
+        "internet_service": "DSL",
+        "region": "Uva",
+        "monthly_charges": 96.37,
+        "total_charges": 6518.92,
+        "payment_method": "Credit card",
+        "paperless_billing": "No",
+        "dependents": "No",
+        "support_plan": "Yes",
+        "tech_support": "Yes",
+        "complaints_last_12m": 1,
+        "late_payments_last_12m": 0,
+        "satisfaction_score": 8.6,
+        "monthly_usage_gb": 8.5,
+        "discount_pct": 8.58,
+        "senior_citizen": 0
+      }
+    },
+    {
+      "profile": "medium",
+      "customer_id": "CUST100019",
+      "probability": 0.9433945906268654,
+      "reference_replacement_deltas": [
+        [
+          "monthly_usage_gb",
+          0.08373757132398651
+        ],
+        [
+          "contract_type",
+          -0.022114503773907557
+        ],
+        [
+          "satisfaction_score",
+          -0.011081715652390356
+        ],
+        [
+          "age",
+          0.0
+        ]
+      ],
+      "raw_record": {
+        "age": 66,
+        "tenure_months": 59,
+        "contract_type": "One year",
+        "internet_service": "Fiber optic",
+        "region": "North Western",
+        "monthly_charges": 52.79,
+        "total_charges": 3195.43,
+        "payment_method": "Mailed check",
+        "paperless_billing": "Yes",
+        "dependents": "No",
+        "support_plan": "Yes",
+        "tech_support": "No",
+        "complaints_last_12m": 1,
+        "late_payments_last_12m": 0,
+        "satisfaction_score": 10.0,
+        "monthly_usage_gb": 91.3,
+        "discount_pct": 6.92,
+        "senior_citizen": 0
+      }
+    },
+    {
+      "profile": "high",
+      "customer_id": "CUST100178",
+      "probability": 0.9746243586730003,
+      "reference_replacement_deltas": [
+        [
+          "monthly_usage_gb",
+          0.04077833708428025
+        ],
+        [
+          "satisfaction_score",
+          0.0017527453300547613
+        ],
+        [
+          "monthly_charges",
+          0.00045306612987516814
+        ],
+        [
+          "age",
+          0.0
+        ]
+      ],
+      "raw_record": {
+        "age": 27,
+        "tenure_months": 55,
+        "contract_type": "Month-to-month",
+        "internet_service": "Fiber optic",
+        "region": "Uva",
+        "monthly_charges": 82.27,
+        "total_charges": 5058.33,
+        "payment_method": "Electronic check",
+        "paperless_billing": "No",
+        "dependents": "Yes",
+        "support_plan": "No",
+        "tech_support": "Yes",
+        "complaints_last_12m": 1,
+        "late_payments_last_12m": 3,
+        "satisfaction_score": 4.9,
+        "monthly_usage_gb": 87.2,
+        "discount_pct": 8.93,
+        "senior_citizen": 1
+      }
+    }
+  ],
+  "recommendations": [
+    "Pilot the top-risk queue: contact 48 of 240 comparable customers; measured capture is 48 churners versus 41.4 expected randomly.",
+    "Use the contract-rate evidence to test renewal reminders and contract-fit conversations; measure incremental retention by randomized assignment.",
+    "Use satisfaction and complaint evidence to triage service recovery; test response quality and timing rather than assuming a causal benefit.",
+    "Use late-payment and payment-method evidence to test opt-in billing assistance; avoid punitive targeting or sensitive financial profiling.",
+    "Use support and usage evidence to test relevant support onboarding and plan-fit reviews. Audit subgroup access and outcomes, including age and region."
+  ],
+  "versions": {
+    "numpy": "2.5.4",
+    "pandas": "3.0.6",
+    "scikit-learn": "1.9.1",
+    "matplotlib": "3.11.2",
+    "seaborn": "0.13.2",
+    "joblib": "1.6.0",
+    "nbformat": "5.11.1",
+    "nbclient": "0.11.0",
+    "reportlab": "5.0.1",
+    "pypdf": "6.21.1",
+    "pdfplumber": "0.11.10",
+    "ipykernel": "7.4.0"
+  }
+}
